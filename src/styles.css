@@ -1,5 +1,5 @@
 body {
-  background: url("background-image.jpg") no-repeat fixed center center;
+  background: url("src/assets/background-image.jpg") no-repeat fixed center center;
   background-size: cover;
   font-size: 16px;
 }
