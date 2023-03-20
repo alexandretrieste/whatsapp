@@ -1,44 +1,18 @@
-var app = angular.module('whatsappApp', []);
+const form = document.getElementById("form");
 
-app.controller('MainController', function($scope, $window) {
-  $scope.recentes = JSON.parse(localStorage.getItem('recentes') || '[]');
-
-  $scope.enviar = function() {
-    var telefone = $scope.telefone;
-    var link = 'https://wa.me/55' + telefone;
-    var existeRecente = false;
-
-    for (var i = 0; i < $scope.recentes.length; i++) {
-      if ($scope.recentes[i].telefone === telefone) {
-        existeRecente = true;
-        break;
-      }
-    }
-
-    if (!existeRecente) {
-      $scope.recentes.unshift({ telefone: telefone, link: link });
-      $scope.recentes = $scope.recentes.slice(0, 10);
-      localStorage.setItem('recentes', JSON.stringify($scope.recentes));
-    }
-
-    $window.open(link, '_blank');
-  };
-
-  $scope.adicionarRecente = function() {
-    var telefone = $scope.telefone;
-    var existeRecente = false;
-
-    for (var i = 0; i < $scope.recentes.length; i++) {
-      if ($scope.recentes[i].telefone === telefone) {
-        existeRecente = true;
-        break;
-      }
-    }
-
-    if (!existeRecente) {
-      $scope.recentes.unshift({ telefone: telefone });
-      $scope.recentes = $scope.recentes.slice(0, 10);
-      localStorage.setItem('recentes', JSON.stringify($scope.recentes));
-    }
-  };
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  const number = document.getElementById("number").value;
+  const message = document.getElementById("message").value;
+  
+  // Formatar o número de telefone para o padrão internacional
+  const formattedNumber = `whatsapp:${number.replace(/\D/g, "")}`;
+  
+  // Abrir a janela do WhatsApp com a mensagem
+  window.open(`https://wa.me/${formattedNumber}?text=${encodeURIComponent(message)}`, "_blank");
+  
+  // Limpar o formulário
+  document.getElementById("number").value = "";
+  document.getElementById("message").value = "";
 });
