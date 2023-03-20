@@ -1,0 +1,16 @@
+{
+  "name": "atalho-whatsapp",
+  "version": "1.0.0",
+  "description": "Atalho Rápido Whatsapp",
+  "scripts": {
+    "start": "http-server -o -c-1 src/"
+  },
+  "dependencies": {
+    "@angular/core": "^15.2.3",
+    "angular": "1.7.9",
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.2.4"
+  }
+}

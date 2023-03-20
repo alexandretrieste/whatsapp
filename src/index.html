@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="whatsappApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Atalho Rápido Whatsapp</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController">
+  <div class="background">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="text-center">Atalho Rápido Whatsapp</h1>
+          <form ng-submit="enviar()">
+            <div class="form-group">
+              <label for="telefone">Telefone:</label>
+              <input type="tel" class="form-control" id="telefone" ng-model="telefone" ng-change="adicionarRecente()">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+          <br>
+          <h4>Recentes:</h4>
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="recente in recentes track by $index"><a href="{{recente.link}}" target="_blank">{{recente.telefone}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
