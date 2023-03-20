@@ -4,11 +4,12 @@
     <title>WhatsApp Fora da Agenda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="favicon" href="favicon.ico">
   </head>
   <body>
     <form id="form">
-      <label for="number" style="font-weight: bold;">Digite um número de telefone com DDD:</label>
-      <input type="tel" id="number" name="number" placeholder="Digite o número com DDD">
+      <label for="number" style="font-weight: bold;">Whatsapp Fora da Agenda:</label>
+      <input type="tel" id="number" name="number" placeholder="Digite o telefone com DDD">
       <button type="submit">Enviar mensagem</button>
     </form>
 
@@ -30,7 +31,9 @@
 
         // Limpar o formulário
         document.getElementById("number").value = "";
+        window.location.reload();
       });
     </script>
+    <footer>Created by Alexandre Trieste</footer>
   </body>
 </html>
