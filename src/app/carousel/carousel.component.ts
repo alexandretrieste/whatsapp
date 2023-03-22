@@ -2,9 +2,9 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 
 @Component({
-  selector: 'app-carrossel',
-  templateUrl: './carrossel.component.html',
-  styleUrls: ['./carrossel.component.css'],
+  selector: 'app-carousel',
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit, OnDestroy {
   timerSubs!: Subscription;
@@ -29,7 +29,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   iniciarTimer(): void {
-    this.timerSubs = timer(10000).subscribe(() => {
+    this.timerSubs = timer(50000).subscribe(() => {
       this.activateImage(this.indexActiveImage + 1);
     });
   }
