@@ -4,7 +4,7 @@ body {
   font-size: 16rem;
 }
 
-#form {
+form {
   max-width: 40em;
   margin: 0 auto;
   position: absolute;
@@ -17,7 +17,7 @@ body {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 }
 
-#form::before {
+form::before {
   content: "";
   position: absolute;
   top: -1em;
@@ -29,7 +29,7 @@ body {
   filter: blur(0.5em);
 }
 
-#number {
+number {
   display: block;
   width: 100%;
   padding: 0.5em;
