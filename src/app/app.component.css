@@ -4,7 +4,7 @@ body {
   font-size: 16rem;
 }
 
-#form {
+form {
   max-width: 40em;
   margin: 0 auto;
   position: absolute;
@@ -17,7 +17,7 @@ body {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 }
 
-#form::before {
+form::before {
   content: "";
   position: absolute;
   top: -1em;
@@ -49,14 +49,14 @@ button[type="submit"] {
   font-weight: bold;
   border-radius: 0.5em;
   border: none;
-  background: #25D366;
+  background: #25d366;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
 }
 
 button[type="submit"]:hover {
-  background: #128C7E;
+  background: #128c7e;
 }
 
 footer {

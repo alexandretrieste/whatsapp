@@ -4,17 +4,16 @@ import { FormsModule } from '@angular/forms'; // import do FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, CarouselComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // FormsModule adicionado aos imports
+    FormsModule, // FormsModule adicionado aos imports
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

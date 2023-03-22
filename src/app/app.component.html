@@ -1,3 +1,12 @@
+<app-carousel
+  [images]="[
+    '../assets/imgBackground_4.jpg',
+    '../assets/imgBackground_1.jpg',
+    '../assets/imgBackground_3.jpg',
+    '../assets/imgBackground_2.jpg'
+  ]"
+></app-carousel>
+
 <form (submit)="onSubmit()">
   <label for="number">Número de telefone:</label>
   <input type="text" id="number" [(ngModel)]="number" name="number" />
