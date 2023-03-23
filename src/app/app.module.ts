@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms'; // import do FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselImagesComponent } from './components/carousel-images/carousel-images.component';
+import { FormWhatsappComponent } from './components/forms/form-whatsapp/form-whatsapp.component';
 
 @NgModule({
-  declarations: [AppComponent, CarouselComponent],
+  declarations: [AppComponent, CarouselImagesComponent, FormWhatsappComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

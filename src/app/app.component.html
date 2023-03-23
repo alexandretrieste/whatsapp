@@ -1,22 +1,2 @@
-<!-- <app-carousel
-  [images]="[
-    '../assets/imgBackground_4.jpg',
-    '../assets/imgBackground_1.jpg',
-    '../assets/imgBackground_3.jpg',
-    '../assets/imgBackground_2.jpg'
-  ]"
-></app-carousel> -->
-<!-- whatsapp\src\app\carousel\carousel.component.html -->
-
-<form (submit)="onSubmit()">
-  <label for="number">Whatsapp Fora da Agenda</label>
-  <input
-    type="tel"
-    id="number"
-    [(ngModel)]="number"
-    name="number"
-    placeholder="Insira um telefone"
-  />
-
-  <button type="submit">Enviar mensagem</button>
-</form>
+<app-carousel-images></app-carousel-images>
+<app-form-whatsapp></app-form-whatsapp>
