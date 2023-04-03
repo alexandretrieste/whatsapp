@@ -1,0 +1,13 @@
+<form (submit)="onSubmit()">
+  <label for="number">Whatsapp Fora da Agenda</label>
+  <input
+    type="tel"
+    id="number"
+    value="{{ ngModel }}"
+    name="number"
+    required
+    placeholder="Insira um telefone"
+  />
+
+  <button type="submit">Enviar mensagem</button>
+</form>

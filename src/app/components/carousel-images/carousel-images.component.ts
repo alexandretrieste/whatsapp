@@ -2,14 +2,20 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css'],
+  selector: 'app-carousel-images',
+  templateUrl: './carousel-images.component.html',
+  styleUrls: ['./carousel-images.component.css'],
 })
-export class CarouselComponent implements OnInit, OnDestroy {
+export class CarouselImagesComponent implements OnInit, OnDestroy {
   timerSubs!: Subscription;
 
-  @Input() images: string[] = [];
+  @Input() images: string[] = [
+    '../../../assets/imgBackground_4.jpg',
+    '../../../assets/imgBackground_1.jpg',
+    '../../../assets/imgBackground_3.jpg',
+    '../../../assets/imgBackground_2.jpg',
+    '../../../assets/imgBackground_5.jpg',
+  ];
 
   private _indexActiveImage: number = 0;
   get indexActiveImage() {
@@ -21,14 +27,14 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.iniciarTimer();
+    this.initTimer();
   }
 
   ngOnDestroy(): void {
     this.stopTimer();
   }
 
-  iniciarTimer(): void {
+  initTimer(): void {
     this.timerSubs = timer(50000).subscribe(() => {
       this.activateImage(this.indexActiveImage + 1);
     });
@@ -40,6 +46,6 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   activateImage(index: number): void {
     this.indexActiveImage = index;
-    this.iniciarTimer();
+    this.initTimer();
   }
 }
