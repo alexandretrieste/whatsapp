@@ -11,10 +11,10 @@ export class FormWhatsappComponent {
   number: string = '';
 
   onSubmit() {
-    const message = 'Olá';
+    const message = 'Olá mundo';
 
     // Formatar o número de telefone para o padrão internacional
-    const formattedNumber = `https://api.whatsapp.com/send?phone=55${this.number.replace(
+    const formattedNumber = `https://api.whatsapp.com/send?phone=${this.number.replace(
       /\D/g,
       ''
     )}&text=${encodeURIComponent(message)}`;
