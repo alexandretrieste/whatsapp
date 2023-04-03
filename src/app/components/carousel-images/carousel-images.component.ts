@@ -35,7 +35,7 @@ export class CarouselImagesComponent implements OnInit, OnDestroy {
   }
 
   initTimer(): void {
-    this.timerSubs = timer(50000).subscribe(() => {
+    this.timerSubs = timer(10000).subscribe(() => {
       this.activateImage(this.indexActiveImage + 1);
     });
   }
