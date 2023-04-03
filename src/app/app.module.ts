@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; // import do FormsModule
-
+import { FormWhatsappComponent } from 'src/app/components/forms/form-whatsapp/form-whatsapp.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselImagesComponent } from 'src/app/components/carousel-images/carousel-images.component';
 
 @NgModule({
-  declarations: [AppComponent, CarouselComponent],
+  declarations: [AppComponent, CarouselImagesComponent, FormWhatsappComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
