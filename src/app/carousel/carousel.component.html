@@ -1,0 +1,21 @@
+<!-- <app-carousel
+  [images]="[
+    '../assets/imgBackground_4.jpg',
+    '../assets/imgBackground_1.jpg',
+    '../assets/imgBackground_3.jpg',
+    '../assets/imgBackground_2.jpg'
+  ]"
+></app-carousel> -->
+
+<div
+  class="item"
+  [style.backgroundImage]="'url(' + images[indexActiveImage] + ')'"
+></div>
+
+<img
+  *ngFor="let image of images"
+  [src]="image"
+  width="1"
+  height="1"
+  style="opacity: 0; position: fixed"
+/>

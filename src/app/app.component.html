@@ -1,6 +1,16 @@
+<!-- <app-carousel
+  [images]="[
+    '../assets/imgBackground_4.jpg',
+    '../assets/imgBackground_1.jpg',
+    '../assets/imgBackground_3.jpg',
+    '../assets/imgBackground_2.jpg'
+  ]"
+></app-carousel> -->
+<!-- whatsapp\src\app\carousel\carousel.component.html -->
+
 <form (submit)="onSubmit()">
-  <label for="number">Whatsapp Fora da Agenda</label>
-  <input type="text" id="number" [(ngModel)]="number" name="number" placeholder="Digite o telefone com DDD"/>
+  <label for="number">Número de telefone:</label>
+  <input type="text" id="number" [(ngModel)]="number" name="number" />
 
   <button type="submit">Enviar mensagem</button>
 </form>
