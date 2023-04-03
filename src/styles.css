@@ -1,87 +1,9 @@
 body {
-  background: url("src/assets/background-image.jpg") no-repeat fixed center
-    center;
-  background-size: cover;
-}
-
-#form {
-  max-width: 40em;
-  /* min-width: ; */
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2em;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 1em;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-#form::before {
-  content: "";
-  position: absolute;
-  top: -1em;
-  left: -1em;
-  right: -1em;
-  bottom: -1em;
-  z-index: -1;
-  background: inherit;
-  filter: blur(0.5em);
-}
-
-label {
   font-family: "Comic Neue", cursive;
-  font-weight: 800;
-  font-size: 1.2rem;
-  padding-bottom: 1rem;
-  color: #01354b;
-}
-
-#number {
-  width: 100%;
-  padding: 0.5em;
-  font-size: 1em;
-  border-radius: 0.5em;
-  border: none;
-  box-shadow: inset 0 0 0.5em rgba(0, 0, 0, 0.3);
-}
-
-#number::placeholder {
-  font-family: "Comic Neue", cursive;
-  text-align: center;
-}
-
-button {
-  width: 100%;
-  padding: 0.5em;
-  font-size: 1em;
-  font-weight: 700;
-  border-radius: 0.5em;
-  border: none;
-  background: #25d366;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
-}
-
-button:hover {
-  background: #128c7e;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 0.5em;
-  background-color: #f1f1f1;
-  color: #555;
-  font-size: 0.8em;
-  font-family: "Comic Neue", cursive;
+  font-size: 1rem;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

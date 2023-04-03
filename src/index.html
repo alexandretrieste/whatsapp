@@ -1,54 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>WhatsApp Fora da Agenda</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
+    <meta charset="utf-8" />
+    <title>WhatsAngular</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      class="favicon"
-      rel="icon"
-      type="image/x-icon"
-      sizes="32px"
-      href="assets/favicon.ico"
-    />
   </head>
   <body>
-    <form id="form">
-      <label for="number">Whatsapp Fora da Agenda:</label>
-      <input
-        type="tel"
-        id="number"
-        name="number"
-        placeholder="Digite o telefone com DDD"
-      />
-      <button type="submit">Enviar mensagem</button>
-    </form>
-    <script>
-      const form = document.getElementById("form");
-
-      form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const number = document.getElementById("number").value;
-        const message = "Olá mundo!";
-
-        // Formatar o número de telefone para o padrão internacional
-        const formattedNumber = `https://api.whatsapp.com/send?phone=55${number.replace(/\D/g, "")}&text=${encodeURIComponent(message)}`;
-
-        // Abrir a janela do WhatsApp com a mensagem
-        window.open(formattedNumber, "_blank");
-
-        // Limpar o formulário
-        document.getElementById("number").value = "";
-        window.location.reload();
-      });
-    </script>
-    <footer>Created by Alexandre Trieste</footer>
+    <app-root></app-root>
   </body>
 </html>
