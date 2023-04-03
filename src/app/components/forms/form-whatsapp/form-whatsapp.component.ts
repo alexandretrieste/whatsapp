@@ -1,26 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-form-whatsapp',
   templateUrl: './form-whatsapp.component.html',
-  styleUrls: ['./form-whatsapp.component.css'],
+  styleUrls: ['./form-whatsapp.component.css']
 })
 export class FormWhatsappComponent {
-  @Input() ngModel!: number;
-
   number: string = '';
 
   onSubmit() {
-    const message = 'Olá mundo';
+    const formattedNumber = '55' + this.number.replace(/\D/g, '');
+    const mensagem = encodeURIComponent('Olá mundo!');
+    const link = `https://wa.me/${formattedNumber}?text=${mensagem}`;
 
-    // Formatar o número de telefone para o padrão internacional
-    const formattedNumber = `https://api.whatsapp.com/send?phone=${this.number.replace(
-      /\D/g,
-      ''
-    )}&text=${encodeURIComponent(message)}`;
-
-    // Abrir a janela do WhatsApp com a mensagem
-    window.open(formattedNumber, '_blank');
+    window.open(link, '_blank');
 
     // Limpar o formulário
     this.number = '';

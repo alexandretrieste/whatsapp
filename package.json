@@ -1,6 +1,8 @@
 {
-  "name": "whats",
-  "version": "0.0.0",
+  "name": "Whatsapp-Fora-da-Agenda",
+  "version": "1.0.0",
+  "created": "Alexandre Trieste",
+  "contributors": "Francieli Souza",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
