@@ -15,6 +15,8 @@ export class CarouselImagesComponent implements OnInit, OnDestroy {
     '../../../assets/imgBackground_3.jpg',
     '../../../assets/imgBackground_2.jpg',
     '../../../assets/imgBackground_5.jpg',
+    '../../../assets/imgBackground_6.jpg',
+    '../../../assets/imgBackground_7.jpg'
   ];
 
   private _indexActiveImage: number = 0;
