@@ -40,7 +40,7 @@ export class CarouselImagesComponent implements OnInit, OnDestroy {
     this.stopAutoPlay();
   }
   startAutoPlay(): void {
-    this.timerSubs = interval(10000).subscribe(() => {
+    this.timerSubs = interval(7000).subscribe(() => {
       this.indexActiveImage++;
     });
   }
