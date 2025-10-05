@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-form-whatsapp',
-  templateUrl: './form-whatsapp.component.html',
-  styleUrls: ['./form-whatsapp.component.css']
+    selector: 'app-form-whatsapp',
+    templateUrl: './form-whatsapp.component.html',
+    styleUrls: ['./form-whatsapp.component.css'],
+    standalone: false
 })
 export class FormWhatsappComponent {
   number: string = '';

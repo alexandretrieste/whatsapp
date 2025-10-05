@@ -2,9 +2,10 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 
 @Component({
-  selector: 'app-carousel-images',
-  templateUrl: './carousel-images.component.html',
-  styleUrls: ['./carousel-images.component.css'],
+    selector: 'app-carousel-images',
+    templateUrl: './carousel-images.component.html',
+    styleUrls: ['./carousel-images.component.css'],
+    standalone: false
 })
 export class CarouselImagesComponent implements OnInit, OnDestroy {
   timerSubs!: Subscription;
