@@ -7,15 +7,17 @@ import { Component } from '@angular/core';
 })
 export class FormWhatsappComponent {
   number: string = '';
+  message: string = ''; // Adicione esta linha
 
   onSubmit() {
     const formattedNumber = '55' + this.number.replace(/\D/g, '');
-    const mensagem = encodeURIComponent('Olá mundo!');
+    const mensagem = encodeURIComponent(this.message); // Modifique esta linha
     const link = `https://wa.me/${formattedNumber}?text=${mensagem}`;
 
     window.open(link, '_blank');
 
     // Limpar o formulário
     this.number = '';
+    this.message = ''; // Adicione esta linha
   }
 }
