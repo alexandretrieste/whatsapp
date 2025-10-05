@@ -11,13 +11,16 @@ export class CarouselImagesComponent implements OnInit, OnDestroy {
   timerSubs!: Subscription;
 
   @Input() images: string[] = [
+    '../../../assets/imgBackground_10.jpg',
     '../../../assets/imgBackground_4.jpg',
     '../../../assets/imgBackground_1.jpg',
     '../../../assets/imgBackground_3.jpg',
     '../../../assets/imgBackground_2.jpg',
     '../../../assets/imgBackground_5.jpg',
     '../../../assets/imgBackground_6.jpg',
-    '../../../assets/imgBackground_7.jpg'
+    '../../../assets/imgBackground_7.jpg',
+    '../../../assets/imgBackground_8.jpg',
+    '../../../assets/imgBackground_9.jpg'
   ];
 
   private _indexActiveImage: number = 0;
