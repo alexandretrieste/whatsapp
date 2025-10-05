@@ -1,24 +1,29 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-    selector: 'app-form-whatsapp',
-    templateUrl: './form-whatsapp.component.html',
-    styleUrls: ['./form-whatsapp.component.css'],
-    standalone: false
+  selector: 'app-form-whatsapp',
+  templateUrl: './form-whatsapp.component.html',
+  styleUrls: ['./form-whatsapp.component.css'],
+  standalone: false,
 })
 export class FormWhatsappComponent {
   number: string = '';
-  message: string = ''; // Adicione esta linha
+  message: string = '';
 
   onSubmit() {
-    const formattedNumber = '55' + this.number.replace(/\D/g, '');
-    const mensagem = encodeURIComponent(this.message); // Modifique esta linha
-    const link = `https://wa.me/${formattedNumber}?text=${mensagem}`;
+    let cleanNumber = this.number.trim().replace(/[^\d+]/g, '');
+    let formattedNumber: string;
+    if (cleanNumber.startsWith('+')) {
+      formattedNumber = cleanNumber.substring(1);
+    } else {
+      formattedNumber = '55' + cleanNumber;
+    }
+    const encodedMessage = encodeURIComponent(this.message);
+    const link = `https://wa.me/${formattedNumber}?text=${encodedMessage}`;
 
     window.open(link, '_blank');
-
-    // Limpar o formulário
     this.number = '';
-    this.message = ''; // Adicione esta linha
+    this.message = '';
   }
 }

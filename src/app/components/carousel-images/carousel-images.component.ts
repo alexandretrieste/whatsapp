@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Subscription, timer } from 'rxjs';
+import { Subscription, interval } from 'rxjs';
 
 @Component({
     selector: 'app-carousel-images',
@@ -12,10 +12,10 @@ export class CarouselImagesComponent implements OnInit, OnDestroy {
 
   @Input() images: string[] = [
     '../../../assets/imgBackground_10.jpg',
-    '../../../assets/imgBackground_4.jpg',
     '../../../assets/imgBackground_1.jpg',
-    '../../../assets/imgBackground_3.jpg',
     '../../../assets/imgBackground_2.jpg',
+    '../../../assets/imgBackground_3.jpg',
+    '../../../assets/imgBackground_4.jpg',
     '../../../assets/imgBackground_5.jpg',
     '../../../assets/imgBackground_6.jpg',
     '../../../assets/imgBackground_7.jpg',
@@ -33,25 +33,25 @@ export class CarouselImagesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.initTimer();
+    this.startAutoPlay();
   }
 
   ngOnDestroy(): void {
-    this.stopTimer();
+    this.stopAutoPlay();
   }
-
-  initTimer(): void {
-    this.timerSubs = timer(10000).subscribe(() => {
-      this.activateImage(this.indexActiveImage + 1);
+  startAutoPlay(): void {
+    this.timerSubs = interval(10000).subscribe(() => {
+      this.indexActiveImage++;
     });
   }
 
-  stopTimer(): void {
+  stopAutoPlay(): void {
     this.timerSubs?.unsubscribe();
   }
 
   activateImage(index: number): void {
+    this.stopAutoPlay();
     this.indexActiveImage = index;
-    this.initTimer();
+    this.startAutoPlay();
   }
 }

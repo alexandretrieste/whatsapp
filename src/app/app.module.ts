@@ -11,7 +11,7 @@ import { CarouselImagesComponent } from 'src/app/components/carousel-images/caro
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, // FormsModule adicionado aos imports
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
